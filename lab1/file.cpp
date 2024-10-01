@@ -4,7 +4,7 @@ File::File(const QString& filePath):path(filePath) //определение ко
 {
     QFileInfo file(filePath);//создание объекта QFileInfo, в который передается его имя
     size = file.size(); //вызов метода size() для нахождения размера файла
-    status = file.exists(); //вызов метода exists для определения факта существования файла
+    status = file.exists(); //вызов метода exists() для определения факта существования файла
 }
 
 void File::Update() //обновление данных о файле при изменении его характеристик
