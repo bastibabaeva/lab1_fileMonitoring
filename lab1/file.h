@@ -8,7 +8,7 @@ class File: public QFileInfo //класс File, наследуемый от кл
     friend class Manager;
 private:
     QString path; //путь к файлу
-    int size; //размер
+    int size; //размер файла
     bool status; //статус - существование файла
 public:
     File(const QString& filePath); //конструктор с параметром

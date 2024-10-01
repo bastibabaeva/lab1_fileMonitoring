@@ -1,8 +1,8 @@
 #ifndef CONSOLELOGGER_H
 #define CONSOLELOGGER_H
 #include <QString>
-
 #include <QObject>
+#include "file.h"
 
 class ConsoleLogger:public QObject //класс ConsoleLogger для вывода изменений в файле в консоль
 {

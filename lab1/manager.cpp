@@ -6,11 +6,11 @@ void Manager::Monitoring() //метод, реализующий слежение
 {
     for (int i = 0; i < files.size(); i++)
     {
-        File file = files.at(i); //метод at() для доступа к файлам (элементам вектора files)
+        File &file = files[i]; //создаем ссылку на объект File для доступа к элементам вектора files
         if (file.isChangedStatus()) //если в файле был изменен статус, то
         {
             file.Update(); //обновляем информацию о файле
-            if (file.status && (file.size != 0)) //если файл существует и он не пустой, то
+            if (file.status) //если файл существует, то
             {
                 emit FileCreated(file.path, file.size); //генерация сигнала
             }
